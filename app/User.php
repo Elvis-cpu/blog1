@@ -27,6 +27,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    //esta funcion retorna al modelo article
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
 
     /**
      * The attributes that should be cast to native types.
