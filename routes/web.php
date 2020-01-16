@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('test.index');
+});
+
+Route::group(['prefix'=>'articles'], function (){
+
+    Route::get('view/{id}',[
+        'uses' => 'testcontroller@view',
+        'as' =>'articles view'
+    ]);
+
 });

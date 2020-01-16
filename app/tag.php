@@ -12,6 +12,6 @@ class tag extends Model
 
     public function articles ()
     {
-        return $this->belongsToMany('App\Article');
+        return $this->belongsToMany('App\Article')->whithTimestamps();
     }
 }
