@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('test.index');
+    return view('welcome');
 });
 
 Route::group(['prefix'=>'articles'], function (){
@@ -23,3 +23,7 @@ Route::group(['prefix'=>'articles'], function (){
     ]);
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
